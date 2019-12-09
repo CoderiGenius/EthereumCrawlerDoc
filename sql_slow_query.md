@@ -90,4 +90,37 @@ id | select_type | table |type|possible_key|key|ken_len|ref|rows|extra
 - sql执行时间 722.198s
 
 
+```sql
 
+from transactionandblocks as a INNER JOIN epandpendingdistinct as b on a.TxnHash = b.PendingTxnHash;
+# Time: 191210  0:17:30
+# User@Host: ether[ether] @  [10.22.11.104]
+# Query_time: 722.197764  Lock_time: 0.123007 Rows_sent: 0  Rows_examined: 532250
+SET timestamp=1575908250;
+create table finaldata5 select StaticBlockReward,
+TxnFeeForMiner,
+UncleReward,
+Difficulty,
+TotalDifficulty,
+Size,
+GasUsed,
+a.GasLimit as gaslimitfromTransaction,
+PreviousHash,
+ParentHash,
+Sha3Uncles,
+Blocks,
+TxnHash,
+TransactionValue,
+TxnFeeFromTr,
+Reverted,
+price,
+timestampFromEP,
+PendingTxnHash,
+Nonce,
+b.GasLimit as gaslimitfrompending,
+GasPrice as pendingGasPrice,
+`From`,
+`To`,
+`Value` AS pendingValue,
+timestampFromPeding
+```
