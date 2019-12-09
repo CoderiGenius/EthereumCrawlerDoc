@@ -89,7 +89,7 @@ id | select_type | table |type|possible_key|key|ken_len|ref|rows|extra
 
 - sql执行时间 722.198s
 
-
+- mysql 慢查询日志
 ```sql
 
 from transactionandblocks as a INNER JOIN epandpendingdistinct as b on a.TxnHash = b.PendingTxnHash;
