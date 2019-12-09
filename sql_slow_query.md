@@ -2,7 +2,7 @@
 - mysql版本 5.5
 - 引擎 innodb
 - 两表结构如下
-- 表B 305785行
+- 表B 305785行 字符集 uft8mb4
 
 名称 | 类型|长度
 ---|---|---
@@ -22,7 +22,7 @@ Value | varchar | 180
 timestampFromPeding | varchar | 100
     
 
-- 表A 274475行
+- 表A 274475行 字符集 uft8mb4
     
 名称 | 类型|长度
 ---|---|---
